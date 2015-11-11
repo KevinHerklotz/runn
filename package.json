@@ -1,0 +1,30 @@
+{
+  "name": "runn",
+  "version": "0.1.0",
+  "description": "faster \"npm run\"",
+  "author": "Kevin Herklotz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://KevinHerklotz@github.com/KevinHerklotz/runn.git"
+  },
+  "homepage": "https://github.com/KevinHerklotz/runn#readme",
+  "bugs": {
+    "url": "https://github.com/KevinHerklotz/runn/issues"
+  },
+  "keywords": [
+    "faster",
+    "npm",
+    "run",
+    "one",
+    "process",
+    "task"
+  ],
+  "preferGlobal": true,
+  "bin": {
+    "runn": "./bin/runn.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

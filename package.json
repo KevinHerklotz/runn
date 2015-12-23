@@ -21,10 +21,17 @@
     "task"
   ],
   "preferGlobal": true,
+  "main": {
+    "runn": "dist/runn.js"
+  },
   "bin": {
-    "runn": "./bin/runn.js"
+    "runn": "dist/runn.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.3.17",
+    "babel-preset-es2015": "^6.3.13"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "babel --presets es2015 lib/ --out-dir dist/ && chmod +x dist/runn.js"
   }
 }

@@ -29,9 +29,13 @@
   },
   "devDependencies": {
     "babel-cli": "^6.3.17",
-    "babel-preset-es2015": "^6.3.13"
+    "babel-preset-es2015": "^6.3.13",
+    "onchange": "^2.0.0"
   },
   "scripts": {
-    "compile": "babel --presets es2015 lib/ --out-dir dist/ && chmod +x dist/runn.js"
+    "compile": "babel --presets es2015 lib/ --out-dir dist/ && chmod +x dist/runn.js",
+    "prepublish": "npm run compile",
+    "watch": "onchange 'lib/*.js' -- npm run watch:command",
+    "watch:command": "npm run compile && runn"
   }
 }

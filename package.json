@@ -29,13 +29,16 @@
   },
   "devDependencies": {
     "babel-cli": "^6.3.17",
+    "babel-eslint": "^4.1.6",
     "babel-preset-es2015": "^6.3.13",
+    "eslint": "^1.10.3",
     "onchange": "^2.0.0"
   },
   "scripts": {
-    "compile": "babel --presets es2015 lib/ --out-dir dist/ && chmod +x dist/runn.js",
     "prepublish": "npm run compile",
+    "compile": "echo 'Compile...' && babel --presets es2015 lib/ --out-dir dist/ && chmod +x dist/runn.js",
+    "lint": "echo 'Lint...' && eslint lib/** -c .eslintrc",
     "watch": "onchange 'lib/*.js' -- npm run watch:command",
-    "watch:command": "npm run compile && runn"
+    "watch:command": "npm run -s lint || (npm run -s compile && runn)"
   }
 }

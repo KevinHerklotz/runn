@@ -41,5 +41,8 @@
     "prepublish": "npm run build",
     "watch": "onchange 'lib/*.js' -- npm run watch:command",
     "watch:command": "npm run -s lint && echo 'Success: no lint errors' || true && (npm run -s compile && echo 'Output...' && runn)"
+  },
+  "dependencies": {
+    "cli-color": "^1.1.0"
   }
 }

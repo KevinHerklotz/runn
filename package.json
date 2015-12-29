@@ -40,6 +40,6 @@
     "lint": "echo 'Lint...' && eslint lib/** -c .eslintrc",
     "prepublish": "npm run build",
     "watch": "onchange 'lib/*.js' -- npm run watch:command",
-    "watch:command": "npm run -s lint || (npm run -s compile && runn)"
+    "watch:command": "npm run -s lint && echo 'Success: no lint errors' || true && (npm run -s compile && echo 'Output...' && runn)"
   }
 }

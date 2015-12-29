@@ -39,12 +39,10 @@ The command `npm run build` would initiate 5 processes in this case.
 
 `runn build` will bring the same result, but invokes only 1 process. 
 
-[NPM](https://www.npmjs.com/).
-
 ### Requirements
 
 * [Node >= 4.*](https://nodejs.org)
-* NPM >= 2.* (comes with Node)
+* [NPM](https://www.npmjs.com/) >= 2.* (comes with Node)
 
 ### Installation
 

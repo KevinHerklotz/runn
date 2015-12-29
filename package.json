@@ -35,7 +35,7 @@
     "onchange": "^2.0.0"
   },
   "scripts": {
-    "build": "npm run -s lint && npm run -s compile",
+    "build": "mkdir -p dist && npm run -s lint && npm run -s compile",
     "compile": "echo 'Compile...' && babel --presets es2015 lib/ --out-dir dist/ && chmod +x dist/runn.js",
     "lint": "echo 'Lint...' && eslint lib/** -c .eslintrc",
     "prepublish": "npm run build",

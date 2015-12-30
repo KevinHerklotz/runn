@@ -39,8 +39,8 @@
     "compile": "echo 'Compile...' && babel --presets es2015 lib/ --out-dir dist/ && chmod +x dist/runn.js",
     "lint": "echo 'Lint...' && eslint lib/** -c .eslintrc",
     "prepublish": "npm run build",
-    "watch": "chokidar 'lib/*.js' -c 'npm run watch:command'",
-    "watch:command": "npm run -s lint && echo 'Success: no lint errors' || true && (npm run -s compile && echo 'Output...' && runn)"
+    "watch": "chokidar 'lib/*.js' -c '(npm run watch:command)'",
+    "watch:command": "(npm run -s lint && echo 'Success: no lint errors') || true && (npm run -s compile && echo 'Output...' && runn)"
   },
   "dependencies": {
     "cli-color": "^1.1.0"

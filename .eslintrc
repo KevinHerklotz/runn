@@ -99,7 +99,7 @@
     //
     "accessor-pairs": 2,
     "block-scoped-var": 2,
-    "complexity": [2, 3],
+    "complexity": [2, 8],
     "consistent-return": 2,
     "curly": 2,
     "default-case": 2,
@@ -260,9 +260,11 @@
       "allowArrayStart": true
     }],
     "max-depth": [2, 10],
-    "max-len": [2, 80, 2, {
+    "max-len": [2, 100, 2, {
       "ignoreComments": true,
-      "ignoreUrls": true}],
+      "ignoreUrls": true,
+      "ignorePattern": "(R|r)egexp[A-Z]\w* = " // disable for assignments of regular expressions
+    }],
     "max-nested-callbacks": [2, 4],
     "max-params": [2, 4],
     "max-statements": 0,
